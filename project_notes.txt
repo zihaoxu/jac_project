@@ -1,0 +1,38 @@
+7/27/15
+
+http://quant.caltech.edu/historical-stock-data.html
+
+Buy Data:
+https://quantquote.com/historical-stock-data
+
+Buy More Data:
+http://www.eoddata.com/Products/HistoricalData.aspx
+
+Minute Resolution Pricing:
+
+DJIA	41	$150
+NASDAQ 100	169	$400
+S&P 100	173	$400
+S&P 500	895	$895
+ETF	252	$500
+Complete 1	16206	$9000
+
+Pandas can pull from Yahoo Finance!
+
+http://pandas.pydata.org/pandas-docs/stable/remote_data.html
+
+Interesting free data:
+
+http://pages.swcp.com/stocks/#Daily%20update
+
+ALP survey data:
+https://alpdata.rand.org/index.php?page=data&p=showsurvey&syid=67
+
+Zillow has a data page:
+
+http://www.zillow.com/research/data/
+
+Looks like there is data by neighborhood - they only withold the individual home data. The neighborhood level data might be sufficient to correlate with the yelp reviews and do something interesting.
+
+Zillow + Yelp are ideal tools to look for gentrification. Are yelp reviews in gentrifying areas significantly different? What kinds of restaurants exist in gentrifying areas? Number of Yelp users is probably a good handle on gentrification.
+
