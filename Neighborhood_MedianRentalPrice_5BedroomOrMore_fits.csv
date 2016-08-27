@@ -1,0 +1,7 @@
+,Name,County,Metro,mean_price_5BedroomOrMore,min_t_5BedroomOrMore,t_range_5BedroomOrMore,intercept_5BedroomOrMore,price_trend_5BedroomOrMore,intercept_err_5BedroomOrMore,price_trend_err_5BedroomOrMore,rsquared_5BedroomOrMore,std_err_5BedroomOrMore,nobs_5BedroomOrMore
+0,Bedford Stuyvesant,Kings,New York,4066.239,1883.164,669.165,3483.084,0.263,437.799,0.197,0.079,181.769,23.000
+1,Bushwick,Kings,New York,3997.982,1731.081,821.248,2484.473,0.707,376.100,0.174,0.387,218.571,28.000
+2,Jamaica Plain,Suffolk,Boston,3713.750,2035.247,517.082,3697.212,0.007,1159.056,0.504,0.000,318.205,18.000
+3,Brighton,Suffolk,Boston,3558.817,666.500,1885.829,2667.068,0.554,51.373,0.030,0.847,130.406,63.000
+4,Allston,Suffolk,Boston,4059.118,909.833,1642.496,3593.868,0.269,68.881,0.038,0.481,134.729,55.000
+5,North Central,Philadelphia,Philadelphia,2757.812,1609.415,942.915,2023.031,0.353,171.838,0.082,0.383,125.885,32.000
