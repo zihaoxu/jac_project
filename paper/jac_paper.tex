@@ -45,36 +45,54 @@ We hope to present concrete suggestions to restaurant owners to improve the surv
 
 \subsection{Yelp Academic Dataset} \label{Yelp Academic Dataset}
 
-The Yelp Academic Dataset contains five files.
+The Yelp Academic Dataset contains five files:
+
+1) \texttt{yelp\_academic\_dataset\_business.json} \\
+
+2) \texttt{yelp\_academic\_dataset\_review.json} \\
+
+3) \texttt{yelp\_academic\_dataset\_user.json} \\
+
+4) \texttt{yelp\_academic\_dataset\_checkin.json} \\
 
 \subsection{Zillow Public Dataset} \label{Zillow Public Dataset}
 
 The Zillow Public Dataset (hereafter Zillow dataset) contains many files.
 
-Zillow divides homes into geographic ``neighborhoods" with well defined boundaries. The ZHVI, and rental data is reported for every neighborhood, on a monthly basis.
+Zillow divides homes into geographic ``neighborhoods" with well defined boundaries. The Zillow Home Value Index (ZHVI) is Zillow's best estimate of median home price in a neighborhood. ZHVI is reported on a monthly basis for 6,958 neighborhoods across the US.
+
+Median rental price for studio, one, two, three, four and five or more bedroom apartments are reported for a smaller set of about 300 neighborhoods.
+
+Each Zillow neighborhood has geographic boundaries, defined in an associated ESRI arcGIS shape file.
 
 \section{Methods} \label{Methods}
 
 \subsection{Combination of Datasets} \label{Combination of Datasets}
 
-Each Yelp business is tagged with a geographic (latitude, longitude) coordinate. Each Zillow neighborhood has geographic boundaries. We sort each Yelp business into its appropriate Zillow neighborhood.
+Each Yelp business is tagged with a geographic (latitude, longitude) coordinate. In this section, we describe how we sort each Yelp business into its appropriate Zillow neighborhood.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width = \textwidth]{phx_test.png}
-\caption{Yelp Businesses (points in blue) and Zillow neighborhood boundaries (lines in red) for  }
+\caption{Yelp Businesses (points in blue) and Zillow neighborhood boundaries (lines in red) for the Phoenix, AZ metro area. In \S\ref{Combination of Datasets}, we describe how we sort each Yelp Business into its appropriate Zillow neighborhood.}
 \label{default}
 \end{center}
 \end{figure}
+
+To perform this sorting, we employ a two-step approach. In the first step, we test every Yelp business for inclusion in the bounding box of every Zillow neighborhood. In the second step, we test every Yelp business for polygon inclusion in the neighborhoods which bounding boxes it lies within. We use this two-step approach because the first step can rule out all but two or three of the 
+
+We introduce the concept of the bounding box which we will define as the smallest range of latitudes and longitudes that include the whole neighborhood polygon. We test each Yelp business for inclusion in the set of 6,958 bounding boxes. In Fig. \ref{bbox_example}, we see a randomly selected Yelp business, displayed as a red point. We see that this business is included in the bounding boxes of two Zillow neighborhoods.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width = \textwidth]{bbox_example.png}
-\caption{Example of neighborhood and neighborhood bounding box inclusion method}
-\label{default}
+\caption{Example of neighborhood and neighborhood bounding box inclusion method. Yelp business 400 (the red point) is included in the bounding boxes of two Zillow neighborhoods. It is only included in one neighborhood polygon, however.}
+\label{bbox_example}
 \end{center}
 \end{figure}
 
+
+We then test for point-in-polygon inclusion using an implementation of a ray-casting method in \texttt{Python} \citep{sutherland1974characterization}. For each Yelp business, we only test the Zillow neighborhoods whose bounding boxes it lies within. 
 
 \subsection{Determination of Most Common Yelp Tags} \label{Determination of Most Common Yelp Tags}
 

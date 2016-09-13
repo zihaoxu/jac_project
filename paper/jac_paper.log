@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 SEP 2016 13:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 SEP 2016 09:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,43 +275,77 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<phx_test.png, id=10, 1445.4pt x 1156.32pt>
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+<phx_test.png, id=11, 1445.4pt x 1156.32pt>
 File: phx_test.png Graphic file (type png)
  <use phx_test.png>
-Package pdftex.def Info: phx_test.png used on input line 64.
+Package pdftex.def Info: phx_test.png used on input line 76.
 (pdftex.def)             Requested size: 430.00462pt x 344.00507pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
 
-<bbox_example.png, id=12, 578.16pt x 433.62pt>
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+<bbox_example.png, id=13, 578.16pt x 433.62pt>
 File: bbox_example.png Graphic file (type png)
  <use bbox_example.png>
-Package pdftex.def Info: bbox_example.png used on input line 72.
+Package pdftex.def Info: bbox_example.png used on input line 88.
 (pdftex.def)             Requested size: 430.00462pt x 322.50143pt.
- [2 <./phx_test.png>] [3 <./bbox_example.png>] (./jac_paper.bbl [4]) [5] (./jac
-_paper.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- ) 
+Package natbib Warning: Citation `sutherland1974characterization' on page 2 und
+efined on input line 95.
+
+(./jac_paper.bbl [2] [3 <./phx_test.png>] [4 <./bbox_example.png>] [5])
+
+Package natbib Warning: There were undefined citations.
+
+[6] (./jac_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 3243 strings out of 493315
- 43675 string characters out of 6137904
- 111489 words of memory out of 5000000
- 6652 multiletter control sequences out of 15000+600000
- 10142 words of font info for 38 fonts, out of 8000000 for 9000
+ 3268 strings out of 493315
+ 44111 string characters out of 6137904
+ 112497 words of memory out of 5000000
+ 6672 multiletter control sequences out of 15000+600000
+ 10875 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,26p,254b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on jac_paper.pdf (5 pages, 1039872 bytes).
+ 38i,6n,26p,453b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb>
+Output written on jac_paper.pdf (6 pages, 1070082 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
