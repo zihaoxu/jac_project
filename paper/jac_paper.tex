@@ -7,6 +7,7 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{float}
 \usepackage{natbib}
 
 \title{Survival of Gentrification / Depreciation in Restaurants}
@@ -55,6 +56,8 @@ The Yelp Academic Dataset contains five files:
 
 4) \texttt{yelp\_academic\_dataset\_checkin.json} \\
 
+The Yelp Dataset Business file includes 
+
 \subsection{Zillow Public Dataset} \label{Zillow Public Dataset}
 
 The Zillow Public Dataset (hereafter Zillow dataset) contains many files.
@@ -71,7 +74,7 @@ Each Zillow neighborhood has geographic boundaries, defined in an associated ESR
 
 Each Yelp business is tagged with a geographic (latitude, longitude) coordinate. In this section, we describe how we sort each Yelp business into its appropriate Zillow neighborhood.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width = \textwidth]{phx_test.png}
 \caption{Yelp Businesses (points in blue) and Zillow neighborhood boundaries (lines in red) for the Phoenix, AZ metro area. In \S\ref{Combination of Datasets}, we describe how we sort each Yelp Business into its appropriate Zillow neighborhood.}
@@ -83,7 +86,7 @@ To perform this sorting, we employ a two-step approach. In the first step, we te
 
 We introduce the concept of the bounding box which we will define as the smallest range of latitudes and longitudes that include the whole neighborhood polygon. We test each Yelp business for inclusion in the set of 6,958 bounding boxes. In Fig. \ref{bbox_example}, we see a randomly selected Yelp business, displayed as a red point. We see that this business is included in the bounding boxes of two Zillow neighborhoods.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width = \textwidth]{bbox_example.png}
 \caption{Example of neighborhood and neighborhood bounding box inclusion method. Yelp business 400 (the red point) is included in the bounding boxes of two Zillow neighborhoods. It is only included in one neighborhood polygon, however.}
@@ -91,45 +94,105 @@ We introduce the concept of the bounding box which we will define as the smalles
 \end{center}
 \end{figure}
 
-
 We then test for point-in-polygon inclusion using an implementation of a ray-casting method in \texttt{Python} \citep{sutherland1974characterization}. For each Yelp business, we only test the Zillow neighborhoods whose bounding boxes it lies within. 
 
-\begin{tabular}{lrrrr}
-\hline
-{} &  median &         mean &    sum &  len \\
-city            &         &              &        &      \\
-\hline
-Charlotte       &    43.0 &    66.092308 &   4296 &   65 \\
-Henderson       &   105.0 &   153.000000 &   2907 &   19 \\
-Las Vegas       &   241.5 &   242.041667 &   5809 &   24 \\
-Madison         &    36.0 &    71.400000 &   1071 &   15 \\
-Mesa            &   491.5 &   509.500000 &   3057 &    6 \\
-North Las Vegas &   903.0 &   903.000000 &    903 &    1 \\
-Phoenix         &   625.0 &   763.333333 &  11450 &   15 \\
-Pittsburgh      &    43.5 &    94.769231 &   2464 &   26 \\
-Scottsdale      &  2100.0 &  1531.666667 &   4595 &    3 \\
-Tempe           &    26.5 &    29.888889 &    538 &   18 \\
-\hline
-\end{tabular}
+\subsection{Description of Combined Dataset}
 
-\begin{tabular}{lrrrr}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = \textwidth]{metro_zhvi_box.png}
+\caption{}
+\label{metro_zhvi_box}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = \textwidth]{metro_zhvisqft_box.png}
+\caption{}
+\label{metro_zhvisqft_box}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = \textwidth]{metro_stars_box.png}
+\caption{}
+\label{metro_zhvisqft_box}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = \textwidth]{metro_price_box.png}
+\caption{}
+\label{metro_zhvisqft_box}
+\end{center}
+\end{figure}
+
+The combined Zillow and Yelp Dataset contains
+
+\begin{table}[H] \label{metro_summary}
+\begin{center}
+\begin{tabular}{|l|rrrr|}
 \hline
-{} &  median &        mean &    sum &  len \\
-state &         &             &        &      \\
+Metro &  median (B/N) &        mean (B/N) &    Total B &  Total N \\
 \hline
-AZ    &   116.5 &  467.619048 &  19640 &   42 \\
-NC    &    43.0 &   66.092308 &   4296 &   65 \\
-NV    &   178.0 &  218.613636 &   9619 &   44 \\
-PA    &    43.5 &   94.769231 &   2464 &   26 \\
-WI    &    36.0 &   71.400000 &   1071 &   15 \\
+Phoenix, AZ    &   116.5 &  467.6 &  19,640 &   42 \\
+Charlotte, NC    &    43.0 &   66.1 &   4,296 &   65 \\
+Las Vegas, NV    &   178.0 &  218.6 &   9,619 &   44 \\
+Pittsburgh, PA    &    43.5 &   94.8 &   2,464 &   26 \\
+Madison, WI    &    36.0 &   71.4 &   1,071 &   15 \\
 \hline
 \end{tabular}
+\end{center}
+\caption{}
+\end{table}
+
+\begin{table}[H] \label{city_summary}
+\begin{center}
+\begin{tabular}{|l|rrrr|} 
+\hline
+City  &  median (B/N) &         mean (B/N) &    Total B &  Total N \\
+\hline
+Charlotte       &    43.0 &    66.1 &   4296 &   65 \\
+Henderson       &   105.0 &   153.0 &   2907 &   19 \\
+Las Vegas       &   241.5 &   242.0 &   5809 &   24 \\
+Madison         &    36.0 &    71.4 &   1071 &   15 \\
+Mesa            &   491.5 &   509.5 &   3057 &    6 \\
+North Las Vegas &   903.0 &   903.0 &    903 &    1 \\
+Phoenix         &   625.0 &   763.30 &  11450 &   15 \\
+Pittsburgh      &    43.5 &    94.8 &   2464 &   26 \\
+Scottsdale      &  2100.0 &  1531.7 &   4595 &    3 \\
+Tempe           &    26.5 &    29.9 &    538 &   18 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{}
+\end{table}
+
 
 \subsection{Determination of Most Common Yelp Tags} \label{Determination of Most Common Yelp Tags}
 
 Each Yelp business has user-generated tags, that allow other users to determine what genre the business is. For restaurants, common tags are "Mexican", "Chinese", etc.
 
 \subsection{Computation of Price Trend} \label{Computation of Price Trend}
+
+\section{Results} \label{Results}
+
+\subsection{Statics Results} \label{Static Results}
+
+In this section, we compute static results for each neighborhood.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = \textwidth]{ZHVI_price_reg.png}
+\caption{}
+\label{ZHVI_price_reg}
+\end{center}
+\end{figure}
+
+
 
 \bibliographystyle{abbrvnat}
 \bibliography{jac_paper.bib}
