@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 SEP 2016 10:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  24 SEP 2016 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -167,28 +167,24 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count104
 )
-(./jac_paper.aux
-
-LaTeX Warning: Label `metro_zhvisqft_box' multiply defined.
-
-
-LaTeX Warning: Label `metro_zhvisqft_box' multiply defined.
-
-)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+) (./jac_paper.aux)
 \openout1 = `jac_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -281,64 +277,142 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+Package natbib Warning: Citation `alghunaim2015vector' on page 1 undefined on i
+nput line 28.
+
+
+Package natbib Warning: Citation `byers2012groupon' on page 1 undefined on inpu
+t line 28.
+
+
+Package natbib Warning: Citation `cawkwell2015tracking' on page 1 undefined on 
+input line 28.
+
+
+Package natbib Warning: Citation `chepurna2015exploiting' on page 1 undefined o
+n input line 28.
+
+
+Package natbib Warning: Citation `feng2013recommendation' on page 1 undefined o
+n input line 28.
+
+
+Package natbib Warning: Citation `gutierrez2014noise' on page 1 undefined on in
+put line 28.
+
+
+Package natbib Warning: Citation `hajas2014analysis' on page 1 undefined on inp
+ut line 28.
+
+
+Package natbib Warning: Citation `hu2014your' on page 1 undefined on input line
+ 28.
+
+
+Package natbib Warning: Citation `liu2015mining' on page 1 undefined on input l
+ine 28.
+
+
+Package natbib Warning: Citation `mashhadi2012accuracy' on page 1 undefined on 
+input line 28.
+
+
+Package natbib Warning: Citation `quattrone2015there' on page 1 undefined on in
+put line 28.
+
+
+Package natbib Warning: Citation `bonnarlittle' on page 1 undefined on input li
+ne 32.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
+Overfull \hbox (84.13542pt too wide) in paragraph at lines 70--71
+[]\OT1/cmr/m/n/10.95 The Zil-low neigh-bor-hood bound-aries $\OT1/cmtt/m/n/10.9
+5 http : / / www . zillow . com / howto / api / neighborhood-[]boundaries .
  []
 
-<phx_test.png, id=11, 1445.4pt x 1156.32pt>
+
+Overfull \hbox (246.2063pt too wide) in paragraph at lines 72--73
+\OT1/cmr/m/n/10.95 cGIS shape file. Bound-ary in-for-ma-tion $\OT1/cmtt/m/n/10.
+95 http : / / www . zillowgroup . com / news / 7000-[]neighborhood-[]boundary-[
+]files-[]in-[]shapefile-[]format/$
+ []
+
+
+Package natbib Warning: Citation `dorsey2010hedonic' on page 2 undefined on inp
+ut line 74.
+
+<phx_test.png, id=12, 1445.4pt x 1156.32pt>
 File: phx_test.png Graphic file (type png)
  <use phx_test.png>
-Package pdftex.def Info: phx_test.png used on input line 79.
+Package pdftex.def Info: phx_test.png used on input line 84.
 (pdftex.def)             Requested size: 430.00462pt x 344.00507pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
- [2]
-<bbox_example.png, id=16, 578.16pt x 433.62pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+
+
+LaTeX Warning: Reference `Combination of Datasets' on page 2 undefined on input
+ line 85.
+
+
+LaTeX Warning: Reference `Combination of Datasets' on page 2 undefined on input
+ line 85.
+
+[2]
+
+LaTeX Warning: Reference `bbox_example' on page 3 undefined on input line 92.
+
+<bbox_example.png, id=17, 578.16pt x 433.62pt>
 File: bbox_example.png Graphic file (type png)
  <use bbox_example.png>
-Package pdftex.def Info: bbox_example.png used on input line 91.
+Package pdftex.def Info: bbox_example.png used on input line 96.
 (pdftex.def)             Requested size: 430.00462pt x 322.50143pt.
  [3 <./phx_test.png>]
 
 Package natbib Warning: Citation `sutherland1974characterization' on page 4 und
-efined on input line 97.
+efined on input line 102.
 
-<metro_zhvi_box.png, id=22, 462.528pt x 317.988pt>
+<metro_zhvi_box.png, id=23, 462.528pt x 317.988pt>
 File: metro_zhvi_box.png Graphic file (type png)
  <use metro_zhvi_box.png>
-Package pdftex.def Info: metro_zhvi_box.png used on input line 103.
+Package pdftex.def Info: metro_zhvi_box.png used on input line 108.
 (pdftex.def)             Requested size: 430.00462pt x 295.64328pt.
 
 [4 <./bbox_example.png>]
@@ -346,53 +420,61 @@ Package pdftex.def Info: metro_zhvi_box.png used on input line 103.
 File: metro_zhvisqft_box.png Graphic file (type png)
 
 <use metro_zhvisqft_box.png>
-Package pdftex.def Info: metro_zhvisqft_box.png used on input line 111.
+Package pdftex.def Info: metro_zhvisqft_box.png used on input line 116.
 (pdftex.def)             Requested size: 430.00462pt x 295.64328pt.
  [5 <./metro_zhvi_box.png>]
 <metro_stars_box.png, id=33, 462.528pt x 317.988pt>
 File: metro_stars_box.png Graphic file (type png)
  <use metro_stars_box.png>
-Package pdftex.def Info: metro_stars_box.png used on input line 119.
+Package pdftex.def Info: metro_stars_box.png used on input line 124.
 (pdftex.def)             Requested size: 430.00462pt x 295.64328pt.
 
 [6 <./metro_zhvisqft_box.png>]
 <metro_price_box.png, id=38, 462.528pt x 317.988pt>
 File: metro_price_box.png Graphic file (type png)
  <use metro_price_box.png>
-Package pdftex.def Info: metro_price_box.png used on input line 127.
+Package pdftex.def Info: metro_price_box.png used on input line 132.
 (pdftex.def)             Requested size: 430.00462pt x 295.64328pt.
 
 [7 <./metro_stars_box.png>] [8 <./metro_price_box.png>]
 <ZHVI_price_reg.png, id=48, 462.528pt x 317.988pt>
 File: ZHVI_price_reg.png Graphic file (type png)
  <use ZHVI_price_reg.png>
-Package pdftex.def Info: ZHVI_price_reg.png used on input line 189.
+Package pdftex.def Info: ZHVI_price_reg.png used on input line 208.
 (pdftex.def)             Requested size: 430.00462pt x 295.64328pt.
 
 [9] <stars_price_scatter_metro.png, id=52, 421.8159pt x 361.35pt>
 File: stars_price_scatter_metro.png Graphic file (type png)
 
 <use stars_price_scatter_metro.png>
-Package pdftex.def Info: stars_price_scatter_metro.png used on input line 197.
+Package pdftex.def Info: stars_price_scatter_metro.png used on input line 216.
 (pdftex.def)             Requested size: 430.00462pt x 368.36261pt.
  [10 <./ZHVI_price_reg.png>]
 (./jac_paper.bbl [11 <./stars_price_scatter_metro.png>])
 
 Package natbib Warning: There were undefined citations.
 
-[12] (./jac_paper.aux)
+[12] (./jac_paper.aux
 
-LaTeX Warning: There were multiply-defined labels.
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3373 strings out of 493315
- 45893 string characters out of 6137904
- 114985 words of memory out of 5000000
- 6767 multiletter control sequences out of 15000+600000
+ 3445 strings out of 493315
+ 46777 string characters out of 6137904
+ 115241 words of memory out of 5000000
+ 6835 multiletter control sequences out of 15000+600000
  11866 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,26p,453b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,26p,483b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -401,7 +483,7 @@ r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on jac_paper.pdf (12 pages, 1515690 bytes).
+Output written on jac_paper.pdf (12 pages, 1517876 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream

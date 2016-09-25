@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{natbib}
+\usepackage{url}
 
 \title{Survival of Gentrification / Depreciation in Restaurants}
 \author{F. M. Marsh and J. A. Clithero}
@@ -66,7 +67,11 @@ Zillow divides homes into geographic ``neighborhoods" with well defined boundari
 
 Median rental price for studio, one, two, three, four and five or more bedroom apartments are reported for a smaller set of about 300 neighborhoods.
 
-Each Zillow neighborhood has geographic boundaries, defined in an associated ESRI arcGIS shape file.
+The Zillow neighborhood boundaries \url{http://www.zillow.com/howto/api/neighborhood-boundaries.htm}
+
+Each Zillow neighborhood has geographic boundaries, defined in an associated ESRI arcGIS shape file. Boundary information \url{http://www.zillowgroup.com/news/7000-neighborhood-boundary-files-in-shapefile-format/} Released in 2008
+
+ZHVI methodology. \url{http://www.zillow.com/research/zhvi-methodology-6032/} \citep{dorsey2010hedonic}
 
 \section{Methods} \label{Methods}
 
@@ -146,7 +151,7 @@ Madison, WI    &    36.0 &   71.4 &   1,071 &   15 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{}
+\caption{min n = 20}
 \end{table}
 
 \begin{table}[H] \label{city_summary}
@@ -169,6 +174,20 @@ Tempe           &    26.5 &    29.9 &    538 &   18 \\
 \end{tabular}
 \end{center}
 \caption{}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{lrrrr}
+{} &     median &       mean &          sum &  len \\
+state &            &            &              &      \\
+AZ    &  31.609536 &  62.769432 &  2636.316160 &   42 \\
+NC    &   2.776164 &   3.466144 &   225.299334 &   65 \\
+NV    &  11.553754 &  22.659192 &   997.004433 &   44 \\
+PA    &   1.192682 &   1.586050 &    41.237288 &   26 \\
+WI    &   0.057833 &   0.066647 &     0.999710 &   15 \\
+\end{tabular}
+\caption{n = 20}
 \end{table}
 
 
