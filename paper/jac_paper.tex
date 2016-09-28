@@ -57,7 +57,8 @@ The Yelp Academic Dataset contains five files:
 
 4) \texttt{yelp\_academic\_dataset\_checkin.json} \\
 
-The Yelp Dataset Business file includes 
+The Yelp Dataset Business file includes data on 77,445 businesses in the metro areas of Las Vegas, NV, Phoenix, AZ,  Charlotte, NC Pittsburgh, PA Champaign, IL, Kitchener,Canada, Montreal, Canada, Edinburgh, Scotland, Karlsruhe, Germany.
+
 
 \subsection{Zillow Public Dataset} \label{Zillow Public Dataset}
 
@@ -105,6 +106,14 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
+\includegraphics[width = \textwidth]{number_cutoff_2.png}
+\caption{}
+\label{number_cutoff_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
 \includegraphics[width = \textwidth]{metro_zhvi_box.png}
 \caption{}
 \label{metro_zhvi_box}
@@ -134,6 +143,26 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 \label{metro_zhvisqft_box}
 \end{center}
 \end{figure}
+
+\begin{table}[H] \label{retention_rate}
+\begin{center}
+\begin{tabular}{|lrrr|} \hline
+Metro & Original & Retained & Rate \\ \hline
+Phoenix, AZ & 32,615 & 19,958 & 61.2\% \\
+Charlotte, NC & 6,162 & 4,853 & 78.7\%  \\
+Las Vegas, NV & 21,233 & 9,694 & 45.7\%  \\
+Pittsburgh, PA & 3,754 & 2,749 & 73.2\%\\
+Madison, WI & 2,802 & 1,355 & 48.3\% \\
+Champaign, IL & x & 0 & 0\% \\
+Kitchener, Canada & x & 0 & 0\% \\
+Montreal, Canada & x & 0 & 0\% \\
+Edinburgh, Scotland & x & 0 & 0\% \\
+Karlsruhe, Germany & x & 0 & 0\% \\
+\hline
+\end{tabular}
+\end{center}
+\caption{min n = 0}
+\end{table}
 
 The combined Zillow and Yelp Dataset contains
 
