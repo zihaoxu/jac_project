@@ -19,17 +19,17 @@
 
 \maketitle
 
-\section{Abstract} \label{abstract}
+\textbf{Abstract}
 
 \section{Introduction} \label{introduction}
 
-Yelp Dataset Papers:
+Many large technology services have a large amount of data on they users. This data is used to predict consumer behavior and target advertising to maximize revenue. In order to improve their services, some companies release some of their data to the public. Often, companies that release their data to the public do so to discover new ways of using their data. For example, the business review company Yelp hosts the ``Yelp Dataset Challenge", where scholars can access the data and can donate their time to help Yelp understand their users.
+
+Participants in The Challenge have produced original research on a variety of topics. 
 
 \citep{alghunaim2015vector,byers2012groupon,cawkwell2015tracking,chepurna2015exploiting,feng2013recommendation,gutierrez2014noise,hajas2014analysis,hu2014your,liu2015mining,mashhadi2012accuracy,quattrone2015there}
 
-Zillow Dataset Papers:
-
-Has previously been combined with the yelp dataset \citet{bonnarlittle}.
+The Yelp and Zillow public datasets have previously been combined, to produce a web tool that provides neighborhood-based restaurant information \citep{bonnarlittle}.
 
 Our goal is to use the correlation of two time-series:
 
@@ -47,66 +47,73 @@ We hope to present concrete suggestions to restaurant owners to improve the surv
 
 \subsection{Yelp Academic Dataset} \label{Yelp Academic Dataset}
 
-The Yelp Academic Dataset contains five files:
+The Yelp Academic Dataset (available at \url{https://www.yelp.com/dataset_challenge/dataset}) contains five files. There are separate files for businesses, users, reviews, check-ins.
 
-1) \texttt{yelp\_academic\_dataset\_business.json} \\
-
-2) \texttt{yelp\_academic\_dataset\_review.json} \\
-
-3) \texttt{yelp\_academic\_dataset\_user.json} \\
-
-4) \texttt{yelp\_academic\_dataset\_checkin.json} \\
+In this study, we will use three of the files: we will use the files on businesses, reviews and users.
 
 The Yelp Dataset Business file includes data on 77,445 businesses in the metro areas of Las Vegas, NV, Phoenix, AZ,  Charlotte, NC Pittsburgh, PA Champaign, IL, Kitchener,Canada, Montreal, Canada, Edinburgh, Scotland, Karlsruhe, Germany.
 
+The Yelp Dataset User file includes data
+
+The Yelp Dataset Review file includes data
 
 \subsection{Zillow Public Dataset} \label{Zillow Public Dataset}
 
-The Zillow Public Dataset (hereafter Zillow dataset) contains many files.
+The Zillow Public Dataset (available at \url{http://www.zillow.com/research/data/#bulk}) contains data on home value indices for various neighborhoods across the United States. Zillow has created a proprietary index of home value, called the ``Zillow Home Value Index" (hereon ZHVI). The methodology used to calculate ZHVI can be found at \url{http://www.zillow.com/research/zhvi-methodology-6032/} \citep{dorsey2010hedonic}.
 
-Zillow divides homes into geographic ``neighborhoods" with well defined boundaries. The Zillow Home Value Index (ZHVI) is Zillow's best estimate of median home price in a neighborhood. ZHVI is reported on a monthly basis for 6,958 neighborhoods across the US.
-
-Median rental price for studio, one, two, three, four and five or more bedroom apartments are reported for a smaller set of about 300 neighborhoods.
-
-The Zillow neighborhood boundaries \url{http://www.zillow.com/howto/api/neighborhood-boundaries.htm}
-
-Each Zillow neighborhood has geographic boundaries, defined in an associated ESRI arcGIS shape file. Boundary information \url{http://www.zillowgroup.com/news/7000-neighborhood-boundary-files-in-shapefile-format/} Released in 2008
-
-ZHVI methodology. \url{http://www.zillow.com/research/zhvi-methodology-6032/} \citep{dorsey2010hedonic}
+Zillow divides homes into geographic ``neighborhoods" with boundaries.  ZHVI is reported on a monthly basis for 6,958 neighborhoods across the US. Zillow Rental Index (hereon ZRI) is reported for studio, one, two, three, four and five or more bedroom apartments are reported for a smaller set of about 300 neighborhoods. The Zillow neighborhood boundaries (initially released in 2008) can be accessed (in ESRI arcGIS shapefile format) at \url{http://www.zillow.com/howto/api/neighborhood-boundaries.htm}.
 
 \section{Methods} \label{Methods}
 
-\subsection{Combination of Datasets} \label{Combination of Datasets}
+In \S\ref{sec: Combination of Datasets} we describe how the restaurant locations from the Yelp Dataset and the neighborhood boundaries from the Zillow dataset were combined.
 
-Each Yelp business is tagged with a geographic (latitude, longitude) coordinate. In this section, we describe how we sort each Yelp business into its appropriate Zillow neighborhood.
+In \S\ref{sec: Yelp User Description} we describe how each users was assigned a most probable Zillow neighborhood to live in.
 
+\subsection{Combination of Datasets} \label{sec: Combination of Datasets}
+
+ In this section, we describe how we sort each Yelp business into its appropriate Zillow neighborhood. This step is necessary to attach a neighborhood Zillow Home Value Index (ZHVI) to each restaurant.
+ 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{phx_test.png}
+\includegraphics[scale = 0.25]{phx_test.png}
 \caption{Yelp Businesses (points in blue) and Zillow neighborhood boundaries (lines in red) for the Phoenix, AZ metro area. In \S\ref{Combination of Datasets}, we describe how we sort each Yelp Business into its appropriate Zillow neighborhood.}
 \label{default}
 \end{center}
 \end{figure}
 
-To perform this sorting, we employ a two-step approach. In the first step, we test every Yelp business for inclusion in the bounding box of every Zillow neighborhood. In the second step, we test every Yelp business for polygon inclusion in the neighborhoods which bounding boxes it lies within. We use this two-step approach because the first step can rule out all but two or three of the 
+Each Yelp business is tagged with a geographic (latitude, longitude) coordinate, and each Zillow neighborhood is reported as an ArcGIS Shape (\texttt{.shp}) file. The shapefile includes a set of (typically 100 to 200)  (latitude, longitude) points that describe the boundaries of each neighborhood. This file also includes a set of four points that describe the four corners of the neighborhood's \emph{bounding box}: the smallest box in latitude and longitude that includes the entire neighborhood polygon.
 
-We introduce the concept of the bounding box which we will define as the smallest range of latitudes and longitudes that include the whole neighborhood polygon. We test each Yelp business for inclusion in the set of 6,958 bounding boxes. In Fig. \ref{bbox_example}, we see a randomly selected Yelp business, displayed as a red point. We see that this business is included in the bounding boxes of two Zillow neighborhoods.
+To perform the sorting of Yelp businesses into Zillow neighborhoods, we employ a two-step approach. In the first step, we test every Yelp business for inclusion in the bounding box of every Zillow neighborhood. In the second step, we test every Yelp business for polygon inclusion in the neighborhoods which bounding boxes it lies within. We use this two-step approach because the first step can rule out all but two or three of the 6,958 possible Zillow neighborhoods.
+
+We test each Yelp business for inclusion in the set of 6,958 bounding boxes. In Fig. \ref{bbox_example}, we see a randomly selected Yelp business, displayed as a red point. We see that this business is included in the bounding boxes of two Zillow neighborhoods.
+
+We then test for point-in-polygon inclusion using an implementation of a ray-casting method in \texttt{Python} \citep{sutherland1974characterization}. For each Yelp business, we only test the Zillow neighborhoods whose bounding boxes it lies within. 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{bbox_example.png}
+\includegraphics[scale = 0.50]{bbox_example.png}
 \caption{Example of neighborhood and neighborhood bounding box inclusion method. Yelp business 400 (the red point) is included in the bounding boxes of two Zillow neighborhoods. It is only included in one neighborhood polygon, however.}
 \label{bbox_example}
 \end{center}
 \end{figure}
 
-We then test for point-in-polygon inclusion using an implementation of a ray-casting method in \texttt{Python} \citep{sutherland1974characterization}. For each Yelp business, we only test the Zillow neighborhoods whose bounding boxes it lies within. 
+This process assigns a Zillow neighborhood ID \texttt{z\_hood} to each Yelp business which resides in a Zillow neighborhood.
+
+\subsection{Area Computation} \label{sec: Area Computation}
+
+We compute the geographic area of each neighborhood in square miles. We retrieve the (longitude, latitude) points that describe the boundary of each neighborhood and use
+
+\subsection{Yelp User Description} \label{sec: Yelp User Description}
+
+We would like to determine where each Yelp user lives, in order to estimate their income. A Yelp user can write reviews of different restaurants. It is common for one Yelp user to write reviews of more than one restaurant. We can see a list of the restaurants that each user has reviewed.
+
+We assume that the user resides in the neighborhood which contains the their \emph{medoid} restaurant. 
 
 \subsection{Description of Combined Dataset}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{number_cutoff_2.png}
+\includegraphics[scale = 0.50]{number_cutoff_2.png}
 \caption{}
 \label{number_cutoff_2}
 \end{center}
@@ -114,7 +121,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{neighborhood_cutoff_state.png}
+\includegraphics[scale = 0.50]{neighborhood_cutoff_state.png}
 \caption{}
 \label{neighborhood_cutoff_state}
 \end{center}
@@ -122,7 +129,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{neighborhood_cutoff_state2.png}
+\includegraphics[scale = 0.50]{neighborhood_cutoff_state2.png}
 \caption{}
 \label{neighborhood_cutoff_state2}
 \end{center}
@@ -130,7 +137,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{metro_zhvi_box.png}
+\includegraphics[scale = 0.50]{metro_zhvi_box.png}
 \caption{}
 \label{metro_zhvi_box}
 \end{center}
@@ -138,7 +145,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{metro_zhvisqft_box.png}
+\includegraphics[scale = 0.50]{metro_zhvisqft_box.png}
 \caption{}
 \label{metro_zhvisqft_box}
 \end{center}
@@ -146,7 +153,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{metro_stars_box.png}
+\includegraphics[scale = 0.50]{metro_stars_box.png}
 \caption{}
 \label{metro_zhvisqft_box}
 \end{center}
@@ -154,7 +161,7 @@ We then test for point-in-polygon inclusion using an implementation of a ray-cas
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{metro_price_box.png}
+\includegraphics[scale = 0.50]{metro_price_box.png}
 \caption{}
 \label{metro_zhvisqft_box}
 \end{center}
@@ -305,7 +312,7 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{all_review_trend.png}
+\includegraphics[scale = 0.50]{all_review_trend.png}
 \caption{}
 \label{all_review_trend}
 \end{center}
@@ -313,7 +320,7 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{all_review_trend_detail.png}
+\includegraphics[scale = 0.50]{all_review_trend_detail.png}
 \caption{}
 \label{all_review_trend_detail}
 \end{center}
@@ -321,7 +328,7 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{state_review_trend.png}
+\includegraphics[scale = 0.50]{state_review_trend.png}
 \caption{}
 \label{state_review_trend}
 \end{center}
@@ -329,7 +336,7 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{state_review_trend_log.png}
+\includegraphics[scale = 0.50]{state_review_trend_log.png}
 \caption{}
 \label{state_review_trend_log}
 \end{center}
@@ -337,7 +344,7 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{review_neighborhood_hist.png}
+\includegraphics[scale = 0.50]{review_neighborhood_hist.png}
 \caption{}
 \label{review_neighborhood_hist}
 \end{center}
@@ -345,13 +352,11 @@ counts &                    name \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{review_business_hist.png}
+\includegraphics[scale = 0.50]{review_business_hist.png}
 \caption{}
 \label{review_business_hist}
 \end{center}
 \end{figure}
-
-\subsection{Yelp User Description} \label{Yelp User Description}
 
 
 
@@ -374,7 +379,7 @@ In this section, we compute static results for each neighborhood.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{ZHVI_price_reg.png}
+\includegraphics[scale = 0.50]{ZHVI_price_reg.png}
 \caption{}
 \label{ZHVI_price_reg}
 \end{center}
@@ -382,7 +387,7 @@ In this section, we compute static results for each neighborhood.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width = \textwidth]{stars_price_scatter_metro.png}
+\includegraphics[scale = 0.50]{stars_price_scatter_metro.png}
 \caption{}
 \label{stars_price_scatter_metro}
 \end{center}

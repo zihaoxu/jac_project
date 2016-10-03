@@ -1,101 +1,101 @@
 ,counts,name
-47285,483,Starbucks
-47872,365,Subway
-32246,345,McDonald's
-55814,200,Walgreens
-49034,180,Taco Bell
-39054,155,Pizza Hut
-8561,147,Burger King
-56135,144,Wendy's
-52181,134,The UPS Store
-37041,120,Panda Express
-16257,119,Dunkin' Donuts
-5291,118,Bank of America
-21597,114,Great Clips
-56127,108,Wells Fargo Bank
-11833,107,Circle K
-15746,97,Domino's Pizza
-11495,95,Chipotle Mexican Grill
-25862,95,Jimmy John's
-26500,93,KFC
-54057,88,US Post Office
-10944,87,Chase Bank
-17543,86,Enterprise Rent-A-Car
-48411,85,Supercuts
-37095,84,Papa John's Pizza
-14104,83,Dairy Queen
-25823,83,Jiffy Lube
-25313,79,Jack in the Box
-40613,78,QuikTrip
-55847,78,Walmart Supercenter
-14711,77,Denny's
-13868,74,Cvs Pharmacy
-46277,68,Sonic Drive-In
-3432,63,Arby's
-48876,63,T-Mobile
-51026,62,The Home Depot
-42843,61,Ross Dress for Less
-14602,60,Del Taco
-18841,59,Firestone Complete Auto Care
-38085,59,PetSmart
-18580,59,FedEx Office Print & Ship Center
-409,57,7-Eleven
-1976,57,Albertsons
-12443,57,Cold Stone Creamery
-8847,55,CVS Pharmacy
-11251,55,Chick-fil-A
-18827,52,Firehouse Subs
-3321,50,Applebee's
-16885,49,Einstein Bros Bagels
-18983,47,Five Guys Burgers and Fries
-25753,47,Jersey Mike's Subs
-37058,46,Panera Bread
-25429,46,Jamba Juice
-39567,46,Port of Subs
-49360,45,Target
-4582,45,AutoZone
-42504,44,Roberto's Taco Shop
-43594,44,Sally Beauty Supply
-5266,43,Banfield Pet Hospital
-53591,43,Tropical Smoothie Cafe
-46898,43,Sport Clips
-25307,42,Jack In the Box
-1089,42,AT&T
-37099,42,Papa Murphy's
-9737,41,Capriotti's Sandwich Shop
-24316,41,IHOP
-9863,41,Carl's Jr
-47006,40,Sprint Store
-49748,40,Terrible Herbst
-5545,40,Barro's Pizza
-55157,39,Verizon
-43425,38,Safeway
-6230,38,Best Buy
-17030,38,El Pollo Loco
-3231,37,Anytime Fitness
-29550,37,Leslie's Swimming Pool Supplies
-8443,37,Buffalo Wild Wings
-29921,37,Little Caesars Pizza
-38091,36,Petco
-42789,36,Rosati's Pizza
-22668,35,Harris Teeter
-19754,35,Fresh & Easy
-23175,35,Hertz Rent A Car
-4612,34,Autozone
-54539,34,Urgent Care Extra
-9869,34,Carl's Jr.
-32902,34,Michaels
-11834,34,Circle K Stores
-36770,34,PT's
-27395,33,Kohl's
-21281,33,Goodwill
-45927,33,Smashburger
-15716,33,Dollar Tree
-27732,33,LA Fitness
-6535,32,Big Lots
-55844,32,Walmart
-40633,32,Quiznos
-47242,31,Staples
-35749,31,O'Reilly Auto Parts
-46310,31,Sonora Quest Laboratories
-50428,31,The Coffee Bean & Tea Leaf
+24075,230,Starbucks
+24372,193,Subway
+16363,172,McDonald's
+28521,102,Walgreens
+24979,95,Taco Bell
+19960,79,Pizza Hut
+26606,77,The UPS Store
+28664,76,Wendy's
+4545,74,Burger King
+2929,73,Bank of America
+28660,70,Wells Fargo Bank
+6123,67,Circle K
+11221,64,Great Clips
+8224,60,Domino's Pizza
+8496,59,Dunkin' Donuts
+18839,59,Panda Express
+5670,55,Chase Bank
+5950,52,Chipotle Mexican Grill
+24680,52,Supercuts
+27615,51,US Post Office
+13373,51,Jiffy Lube
+13394,50,Jimmy John's
+20716,50,QuikTrip
+18867,48,Papa John's Pizza
+13741,46,KFC
+9134,45,Enterprise Rent-A-Car
+7322,45,Dairy Queen
+7209,41,Cvs Pharmacy
+9687,40,FedEx Office Print & Ship Center
+13109,39,Jack in the Box
+24901,38,T-Mobile
+7640,37,Denny's
+1879,36,Arby's
+26020,35,The Home Depot
+9827,35,Firestone Complete Auto Care
+21691,35,Ross Dress for Less
+28538,34,Walmart Supercenter
+19404,34,PetSmart
+1117,33,Albertsons
+4678,33,CVS Pharmacy
+5810,32,Chick-fil-A
+7587,31,Del Taco
+23539,31,Sonic Drive-In
+236,30,7-Eleven
+13337,28,Jersey Mike's Subs
+8786,28,Einstein Bros Bagels
+6438,28,Cold Stone Creamery
+13179,28,Jamba Juice
+22038,27,Sally Beauty Supply
+9905,27,Five Guys Burgers and Fries
+2917,27,Banfield Pet Hospital
+5029,26,Capriotti's Sandwich Shop
+619,26,AT&T
+1826,26,Applebee's
+18850,26,Panera Bread
+21959,25,Safeway
+11783,25,Harris Teeter
+6124,24,Circle K Stores
+25157,24,Target
+27351,24,Tropical Smoothie Cafe
+23934,24,Sprint Store
+9822,24,Firehouse Subs
+25361,23,Terrible Herbst
+20185,23,Port of Subs
+11046,23,Goodwill
+13107,23,Jack In the Box
+21442,22,Rite Aid
+12586,22,IHOP
+23884,22,Sport Clips
+14295,22,LA Fitness
+15172,22,Little Caesars Pizza
+2578,21,Autozone
+8865,20,El Pollo Loco
+20513,20,Public Storage
+21521,20,Roberto's Taco Shop
+20629,20,Qdoba Mexican Grill
+14994,20,Leslie's Swimming Pool Supplies
+10311,20,Fresh & Easy
+3561,20,Big Lots
+28192,20,Verizon
+16470,20,Meineke Car Care Center
+23356,19,Smashburger
+2561,19,AutoZone
+12049,19,Hertz Rent A Car
+1783,19,Anytime Fitness
+18173,19,O'Reilly Auto Parts
+93,19,24 Hour Fitness
+16726,19,Michaels
+4410,18,Bruegger's Bagels
+3394,18,Best Buy
+5091,18,Carl's Jr
+5864,18,Chili's Grill & Bar
+23558,18,Sonora Quest Laboratories
+24287,18,Streets of New York
+5095,18,Carl's Jr.
+22879,18,Shell
+20726,18,Quiznos
+4490,18,Buffalo Wild Wings
+19409,17,Petco
+3037,17,Barro's Pizza
