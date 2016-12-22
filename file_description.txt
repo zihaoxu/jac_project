@@ -1,4 +1,4 @@
-A review_sentiment.csv
+A_review_sentiment.csv
 rows: reviews
 	01 review_id: unique review id
 	02 words: number of words in review
@@ -18,7 +18,7 @@ rows: reviews
 	16 subjectivity: review subjectiviy, as computed by TextBlob
 	17 year: review time in years
 	18 user_id: unique id of user that wrote the review
-B review_with_text.csv
+B_review_with_text.csv
 rows: reviews
 	01 review_id: unique review id
 	02 text: complete review text
@@ -60,4 +60,7 @@ rows: users
 	14 std_stars: the standard deviation of star rating for the user’s reviews
 	15 mean_rel: the mean star rating relative to the business mean for the user’s reviews 
 	16 std_rel: the standard deviation of the star rating relative to the business mean for the user’s reviews 
+E clean_business.csv
+rows: businesses
+	01 
 
