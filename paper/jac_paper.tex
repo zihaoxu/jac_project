@@ -393,6 +393,40 @@ In this section, we compute static results for each neighborhood.
 \end{center}
 \end{figure}
 
+\section{Correlation of Yelp Rating and Zillow Housing Time-Series}
+
+Zillow reports the ZHVI on at the end of each month from 1996 to 2016.
+Yelp reports reviews by date.
+
+We first normalize the ZHVI time-series for each neighborhood, $Z(t)$. For each time $t$:
+
+\begin{equation} \label{zhvi_normalization}
+Z'_{h}(t) = \frac{n(Z_{h}(t))}{\sum_{h = 1}^{n} Z_{h}(t)}
+\end{equation}
+
+Then for each neighborhood $h$:
+
+\begin{equation} \label{zhvi_normalization}
+Z''_{h}(t) = \frac{m(Z'_{h}(t))}{\sum_{t = 1}^{m}Z'_{h}(t)} - 1
+\end{equation}
+
+We perform an identical normalization to the Yelp rating time-series $Y(t)$. For each time $t$:
+
+\begin{equation} \label{zhvi_normalization}
+Y'_{h}(t) = \frac{n(Y_{h}(t))}{\sum_{h = 1}^{n} Y_{h}(t)}
+\end{equation}
+
+Then for each neighborhood $h$:
+
+\begin{equation} \label{zhvi_normalization}
+Y''_{h}(t) = \frac{m(Y'_{h}(t))}{\sum_{t = 1}^{m}Y'_{h}(t)} - 1
+\end{equation}
+
+\begin{equation} \label{t_delay}
+\tau_{\text{delay}} = \stackrel{\text{arg max}}{_{t}} \Big((f \star g)(t) \Big)
+\end{equation}
+
+For each neighborhood $h$, we wish to compute
 
 
 \bibliographystyle{abbrvnat}
